@@ -1,0 +1,53 @@
+name: $(MajorVersion).$(MinorVersion).$(Patchversion)$(Rev:.r)
+resources:
+- repo: self
+queue:
+  name: Hosted VS2017
+  demands: 
+  - msbuild
+  - visualstudio
+
+variables:
+  BuildPlatform: 'Any CPU'
+  BuildConfiguration: 'Release'
+  MajorVersion: 1
+  MinorVersion: 0
+  PatchVersion: 0
+  
+steps:
+- task: NuGetToolInstaller@0
+  displayName: 'Use NuGet 4.9.2'
+  inputs:
+    versionSpec: 4.9.2
+
+- task: NuGetCommand@2
+  displayName: 'NuGet Restore'
+  inputs:
+    restoreSolution:  '**/*.sln'
+
+- task: PowerShell@2
+  displayName: 'Version Assemblies'
+  inputs:
+    targetType: 'filepath'
+    filePath: Build/UpdateAssemblyInfo.ps1
+
+- task: VSBuild@1
+  displayName: 'Build solution'
+  inputs:
+    solution: '**\*.sln'
+    vsVersion: 15.0
+    platform: '$(BuildPlatform)'
+    configuration: '$(BuildConfiguration)'
+    clean: true
+
+- task: CopyFiles@2
+  inputs:
+    contents: '**' 
+    targetFolder: $(Build.ArtifactStagingDirectory)
+    
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathtoPublish: $(Build.ArtifactStagingDirectory)
+    artifactName: 'drop' 
+
+

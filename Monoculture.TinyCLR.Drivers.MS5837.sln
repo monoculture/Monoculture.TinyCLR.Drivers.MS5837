@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{AAC58299-DF50-4721-8FA7-C04B98D103F1}"
+	ProjectSection(SolutionItems) = preProject
+		Build\build-pipeline.yml = Build\build-pipeline.yml
+		Build\SetPackageVersion.ps1 = Build\SetPackageVersion.ps1
+		Build\UpdateAssemblyInfo.ps1 = Build\UpdateAssemblyInfo.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{22D1564E-CBD5-4346-8617-3246E937806D}"
+	ProjectSection(SolutionItems) = preProject
+		Docs\ENG_DS_MS5837-02BA01_A5.pdf = Docs\ENG_DS_MS5837-02BA01_A5.pdf
+		Docs\ENG_DS_MS5837-30BA_B1.pdf = Docs\ENG_DS_MS5837-30BA_B1.pdf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{1A25C0E0-4C5D-453B-9A0C-7E30844D5584}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B5EC0FCD-32EE-4CC7-A540-AEB69F512D51}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monoculture.TinyCLR.Drivers.MS5837", "Source\Monoculture.TinyCLR.Drivers.MS5837\Monoculture.TinyCLR.Drivers.MS5837.csproj", "{882CA870-9A9B-45C6-A729-C19827773B90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monoculture.TinyCLR.Drivers.MS5837.Demo", "Source\Monoculture.TinyCLR.Drivers.MS5837.Demo\Monoculture.TinyCLR.Drivers.MS5837.Demo.csproj", "{E885BFF5-F660-4ABB-8421-94356FDF40AE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{882CA870-9A9B-45C6-A729-C19827773B90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{882CA870-9A9B-45C6-A729-C19827773B90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{882CA870-9A9B-45C6-A729-C19827773B90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{882CA870-9A9B-45C6-A729-C19827773B90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E885BFF5-F660-4ABB-8421-94356FDF40AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E885BFF5-F660-4ABB-8421-94356FDF40AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E885BFF5-F660-4ABB-8421-94356FDF40AE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E885BFF5-F660-4ABB-8421-94356FDF40AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E885BFF5-F660-4ABB-8421-94356FDF40AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E885BFF5-F660-4ABB-8421-94356FDF40AE}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{882CA870-9A9B-45C6-A729-C19827773B90} = {1A25C0E0-4C5D-453B-9A0C-7E30844D5584}
+		{E885BFF5-F660-4ABB-8421-94356FDF40AE} = {1A25C0E0-4C5D-453B-9A0C-7E30844D5584}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {613A9FF2-C40A-4ED9-91F3-CA51B15FC57F}
+	EndGlobalSection
+EndGlobal
