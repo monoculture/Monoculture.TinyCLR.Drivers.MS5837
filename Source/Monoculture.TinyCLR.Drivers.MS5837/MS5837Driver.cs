@@ -133,6 +133,8 @@ namespace Monoculture.TinyCLR.Drivers.MS5837
 
             var d1 = (buffer[0] << 16) | (buffer[1] << 8) | buffer[2];
 
+
+
             WriteByte((byte)(sampleRate + 80));
 
             Thread.Sleep(conversionDelay);
